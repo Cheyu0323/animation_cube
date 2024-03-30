@@ -49,20 +49,18 @@ const Block = () => {
                             position={[-0.5 + index / 8, 0, 0]}
                         />
                     ))}
-                    <Addition scale={[0.5, 0.5, 0.5]} rotation={[0, 0, 0]}>
+                    <Addition scale={[0.6, 0.6, 0.6]} rotation={[0, 0, 0]}>
                         <boxGeometry />
                         <meshStandardMaterial transparent={true} opacity={0} />
                     </Addition>
                 </Geometry>
             </mesh>
-            <mesh scale={[0.1, 0.1, 0.1]} ref={sphereRef}>
+            <mesh scale={[0.15, 0.15, 0.15]} ref={sphereRef}>
                 <sphereGeometry />
                 <meshStandardMaterial
                     color="#9094FE"
                     roughness={0.25}
                     metalness={1}
-                    transparent
-                    opacity={0.8}
                 />
             </mesh>
         </>
@@ -71,7 +69,7 @@ const Block = () => {
 
 const Scene: React.FC = () => {
     return (
-        <Canvas camera={{ fov: 75, near: 0.1, far: 1000, position: [0, 0, 3] }}>
+        <Canvas camera={{ fov: 75, near: 0.1, far: 1000, position: [0, 0, 2.5] }}>
             <color attach="background" args={["#000"]} />
             <OrbitControls enableDamping={false} />
             <DirectionLight
